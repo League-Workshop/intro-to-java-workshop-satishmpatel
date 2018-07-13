@@ -60,14 +60,21 @@ public class RobotTreasureHunt implements KeyEventDispatcher {
 
 		// 7. If robot is at same location as the little girl
 		// --make a pop-up tell the robot where to go next
+		if(robotXLocation==720)
+		{
+			if(robotYLocation >399 && robotYLocation < 461);
+			{
+				JOptionPane.showMessageDialog(null, "Go to the kid in blue");
+			}
+		}
+		//JOptionPane.showMessageDialog(null,);
 		// 8. Give the user subsequent clues at different locations on the image
 		// (pirate robot, swamp, parrots, etc.)
 
 		// 9. If the robot is in the final location
-		// --call the treasureFound() method
+		treasureFound();
 
-	}
-
+}
 	private void go() {
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
 		Robot.setWindowImage("section4/treasure_hunt.jpg");
